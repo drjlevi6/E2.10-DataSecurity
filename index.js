@@ -33,11 +33,11 @@ const Users = Models.User;
 
 //mongoose.connect('mongodb://localhost:27017/myFlix', 
 //    { useNewURLParser: true, useUnifiedTopology: true }
-//mongoose.connect( config.CONNECTION_URI, 
-//  { useNewURLParser: true, useUnifiedTopology: true });
-mongoose.connect( 'mongodb+srv://drjlevi6@aol.con:UcbxtwtjPeh6ZN4!@cluster0.zoljy.mongodb.net/' + 
-  'myFlix?retryWrites=true&w=majority'|| 'mongodb://localhost:27017/myFlix', 
+mongoose.connect( .env.CONNECTION_URI, // was config
   { useNewURLParser: true, useUnifiedTopology: true });
+////mongoose.connect( 'mongodb+srv://drjlevi6@aol.con:UcbxtwtjPeh6ZN4!@cluster0.zoljy.mongodb.net/' + 
+  'myFlix?retryWrites=true&w=majority'|| 'mongodb://localhost:27017/myFlix', 
+//  { useNewURLParser: true, useUnifiedTopology: true });
 
 
 //Display a welcome message:
