@@ -24,7 +24,7 @@ const passport = require('passport');
 require('./passport');
 
 const { check, validationResult } = require('express-validator'); // 2.10
-const config = require('./config');
+//const config = require('./config');
 const mongoose = require('mongoose');
 const Models = require('./models.js');
 
@@ -33,11 +33,8 @@ const Users = Models.User;
 
 //mongoose.connect('mongodb://localhost:27017/myFlix', 
 //    { useNewURLParser: true, useUnifiedTopology: true }
-mongoose.connect( .env.CONNECTION_URI, // was config
+mongoose.connect( '.env.CONNECTION_URI', // was config
   { useNewURLParser: true, useUnifiedTopology: true });
-////mongoose.connect( 'mongodb+srv://drjlevi6@aol.con:UcbxtwtjPeh6ZN4!@cluster0.zoljy.mongodb.net/' + 
-  'myFlix?retryWrites=true&w=majority'|| 'mongodb://localhost:27017/myFlix', 
-//  { useNewURLParser: true, useUnifiedTopology: true });
 
 
 //Display a welcome message:
