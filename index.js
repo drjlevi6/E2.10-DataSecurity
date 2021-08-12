@@ -33,9 +33,10 @@ const Users = Models.User;
 
 //mongoose.connect('mongodb://localhost:27017/myFlix', 
 //    { useNewURLParser: true, useUnifiedTopology: true }
-mongoose.connect( config.CONNECTION_URI, // was config
-  { useNewURLParser: true, useUnifiedTopology: true });
-
+//mongoose.connect( config.CONNECTION_URI, // was config
+//  { useNewURLParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env.CONNECTION_URI, 
+  { useNewUrlParser: true, useUnifiedTopology: true });
 
 //Display a welcome message:
 app.get('/', (req, res) => {
