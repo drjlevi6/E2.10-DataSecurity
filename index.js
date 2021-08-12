@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -24,7 +24,7 @@ const passport = require('passport');
 require('./passport');
 
 const { check, validationResult } = require('express-validator'); // 2.10
-const config = require('./config.js');
+//const config = require('./config.js');
 const mongoose = require('mongoose');
 const Models = require('./models.js');
 
@@ -32,7 +32,7 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 //mongoose.connect('mongodb://localhost:27017/myFlix', 
-//    { useNewURLParser: true, useUnifiedTopology: true }
+//    { useNewURLParser: true, useUnifiedTopology: true });
 mongoose.connect( process.env.CONNECTION_URI, 
   { useNewUrlParser: true, useUnifiedTopology: true });
 
