@@ -30,10 +30,10 @@ const Models = require('./models.js');
 const Movies = Models.Movie;
 const Users = Models.User;
 
-mongoose.connect('mongodb://localhost:27017/myFlix', 
-    { useNewURLParser: true, useUnifiedTopology: true });
-//mongoose.connect( process.env.CONNECTION_URI, 
-//  { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect('mongodb://localhost:27017/myFlix', 
+//    { useNewURLParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env.CONNECTION_URI, 
+  { useNewUrlParser: true, useUnifiedTopology: true });
 //Display a welcome message:
 app.get('/', (req, res) => {
   res.status(201).send('Welcome to Dr. Levi\'s movie application!\n' + 
