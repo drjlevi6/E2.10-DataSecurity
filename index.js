@@ -216,10 +216,11 @@ app.put('/users/:Username', [ //comment: see if GitHub Desktop is responding (20
       ' - not allowed.').isAlphanumeric(),
       check('Email', 'Email does not appear to be valid').isEmail()
     ], (req, res) => {
+      let hashedPassword = Users.hashPassword(req.body.Password);
       Users.findOneAndUpdate({ Username: req.params.Username }, { $set:
     {
       Username: req.body.Username,
-      Password: req.body.Password,
+      Password: hashedPassword,
       Email: req.body.Email,
       Birthday: req.body.Birthday
     }
